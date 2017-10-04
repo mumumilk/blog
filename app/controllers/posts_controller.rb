@@ -9,12 +9,13 @@ class PostsController < ApplicationController
         redirect_to @post
     end
     
+    def show
+        @post = Post.find(params[:id])
+    end
+
     private
     def post_params
       params.require(:post).permit(:title, :text)
     end
 
-    def show
-        # @post = posts.find(1)
-    end
 end
