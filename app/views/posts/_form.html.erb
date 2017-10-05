@@ -1,0 +1,14 @@
+<h1 align="left">New Post</h1>
+
+<%= form_with scope: :post, url: posts_path,  local: true do |form| %>
+
+  <%= form.label :title, "Title", class: "control-label" %>
+  <%= form.text_field :title, class: "form-control" %>
+  <br/><br/>
+  <%= form.label :text, "Text" %>
+  <%= form.text_area :text %>
+  <br/><br/>
+  <%= form.submit "Submit" %>
+<% end %>
+
+<%= link_to 'Home', home_page_index_path %>
